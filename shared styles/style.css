@@ -1,0 +1,24 @@
+.d-flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.d-flex-row-align {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.font-size-s {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.d-flex-gap-s {
+    display: flex;
+    column-gap: 30px;
+}
+
+.week-width {
+    min-width: 100px;
+}

@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e2e2e2;
+    font-family: "Sora", sans-serif;
+    background-image: url("./python\ project\ images/white pattern.png");
+    background-size: 300%;
+    background-position: left;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-container {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    padding: 20px 80px;
+    width: 100%;
+    color: #06511c;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.nav-options {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    column-gap: 70px;
+}
+
+.nav-options > div {
+    cursor: pointer;
+}
+
+.sign {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    column-gap: 20px;
+}
+
+.sign > div {
+    cursor: pointer;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 15px;
+    column-gap: 20px;
+    width: fit-content;
+    background: linear-gradient(to right, #097629, #947b00);
+    color: white;
+    border-radius: 50px;
+    min-width: 200px;
+}
+
+.person-icon {
+    background: white;
+    padding: 10px;
+    width: 45px;
+    border-radius: 50px;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.discription {
+    padding: 100px;
+}
+
+.discription-header {
+    font-weight: bold;
+    width: 420px;
+    font-size: 40px;
+    color: #097629;
+    margin-bottom: 40px;
+}
+
+.first-discription-header-text {
+    color: #947b00 !important;
+}
+
+.discription-details {
+    font-size: 35px !important;
+    width: 400px;
+    color: rgba(0, 0, 0, 0.788);
+    margin-bottom: 40px;
+}
+
+.enrol {
+    background-color: #097629;
+    width: fit-content;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 150;
+    color: white;
+}
+
+.discription-image {
+    display: flex;
+    justify-content: end;
+    clip-path: circle(85.1% at 90% 61%);
+    background-color: #c9dbcf;
+}
+
+.ethics-container {
+    position: absolute;
+    display: flex;
+    column-gap: 5px;
+    justify-content: center;
+    width: 100%;
+    transform: translateY(-200px);
+}
+
+.ethic {
+    display: flex;
+    align-items: center;
+    padding: 10px 45px;
+    column-gap: 25px;
+    width: 420px;
+    height: 200px;
+    background-color: red;
+    border-radius: 20px 20px 0 0;
+}
+
+.vision {
+    background-color: #30884ace;
+}
+
+.mission {
+    background-color: #d1b02dce;
+}
+
+.core-values {
+    background-color: #d2e1dace;
+}
+
+.ethic-headers {
+    font-size: 30px;
+    font-weight: 200;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.ethics-content {
+    color: rgba(0, 0, 0, 0.767);
+}
+
+.socials-container {
+    position: fixed;
+    top: 40%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    /* background-color: black; */
+    background: linear-gradient(to bottom, #097629, #947b00);
+    width: fit-content;
+    padding: 40px 10px;
+    border-radius: 30px 0 0 30px;
+}

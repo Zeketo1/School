@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e2e2e2;
+    font-family: "Sora", sans-serif;
+    background-image: url("../python\ project\ images/white pattern.png");
+    background-size: 300%;
+    background-position: left;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.body-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+}
+
+.main-left {
+    /* min-height: 106.59%; */
+    position: relative;
+    height: 773px;
+    border-radius: 0 50px 50px 0;
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgba(196, 168, 26, 0.295),
+            rgb(196, 167, 26)
+        ),
+        url("../python\ project\ images/girl in lib.png");
+    background-size: 150%;
+    background-position: right;
+    background-attachment: local;
+}
+
+.main-right {
+    height: 773px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0 0 0;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.main-right-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 550;
+    color: #097629;
+    margin-bottom: 30px;
+}
+
+.main-right-description {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.main-right-description > div {
+    width: 600px;
+    text-align: center;
+}
+
+form {
+    width: 450px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 30px;
+}
+
+.input {
+    padding: 15px 20px;
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.36);
+}
+
+.input::placeholder {
+    font-size: 15px;
+}
+
+.password-conditions {
+    display: flex;
+    padding: 0 15px;
+    column-gap: 10px;
+    margin-bottom: 20px;
+    /* padding: 0 50px 0 30px; */
+}
+
+.password-conditions-container {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.conditions {
+    font-size: 15px;
+}
+
+.lil-circle {
+    height: 15px;
+    width: 15px;
+    background-color: gray;
+    border-radius: 50px;
+}
+
+.policy-container {
+    display: flex;
+    width: fit-content;
+    column-gap: 10px;
+    margin: 0 0 10px 30px;
+}

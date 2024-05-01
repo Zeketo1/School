@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="../shared styles/style.css" />
+        <link rel="stylesheet" href="../calender/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <title>Courses Page</title>
+    </head>
+    <body>
+        <div class="page-container">
+            <div class="nav-container">
+                <div class="nav-options">
+                    <img
+                        src="../python project images/home icon.svg"
+                        alt="home-icon"
+                        height="35"
+                    />
+                    <div class="nav-option">Home</div>
+                </div>
+                <div class="nav-options">
+                    <img
+                        src="../python project images/dashboard icon.svg"
+                        alt="dashboard-icon"
+                        height="35"
+                    />
+                    <div class="nav-option">Dashboard</div>
+                </div>
+                <div class="nav-options">
+                    <img
+                        src="../python project images/checkmark-circle-2.svg"
+                        alt="class-icon"
+                        height="35"
+                    />
+                    <div class="nav-option">Classes</div>
+                </div>
+                <div class="nav-options">
+                    <img
+                        src="../python project images/result icon.svg"
+                        alt="result-icon"
+                        height="40"
+                    />
+                    <div class="nav-option">My Results</div>
+                </div>
+                <div class="nav-options">
+                    <img
+                        src="../python project images/contact icon.svg"
+                        alt="contact-us-icon"
+                        height="40"
+                    />
+                    <div class="nav-option">Contact Us</div>
+                </div>
+            </div>
+            <div class="main-container">
+                <div class="main-header">
+                    <div class="date"></div>
+                    <div class="line"></div>
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img
+                                src="../python project images/profile.png"
+                                alt="profile-icon"
+                                height="30"
+                            />
+                        </div>
+                        <div class="profile-text">Hello Francis</div>
+                    </div>
+                </div>
+                <div class="elementary-main-container">
+                    <div class="elementary-header">Elementary Mathematics</div>
+                    <div class="elementary-container">
+                        <div class="first-elementary-content">
+                            <img
+                                src="../python project images/maths.png"
+                                alt="maths-image"
+                                height="220"
+                                width="349"
+                                style="border-radius: 20px"
+                            />
+                            <div class="first-elementary-content-child"></div>
+                        </div>
+                    </div>
+                    <div class="second-elementary-content">
+                        <div class="second-elementary-content-header">
+                            Semester 1 Attendance rating
+                        </div>
+                        <div class="d-flex-row-align">
+                            <div
+                                class="second-elementary-content-classes-container"
+                            >
+                                <div class="d-flex-column-align">
+                                    <div class="line-color line-color-green">
+                                        <div
+                                            class="line-color-text line-color-text-green"
+                                        >
+                                            12
+                                        </div>
+                                    </div>
+                                    <div class="line-color-text2">
+                                        Completed Classes
+                                    </div>
+                                </div>
+                                <div class="d-flex-column-align">
+                                    <div class="line-color line-color-gold">
+                                        <div
+                                            class="line-color-text line-color-text-gold"
+                                        >
+                                            2
+                                        </div>
+                                    </div>
+                                    <div class="line-color-text2">
+                                        In-completed Classes
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="line-color">
+                                        <div class="line-color-text">0</div>
+                                    </div>
+                                    <div class="line-color-text2">
+                                        Missed Classes
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="check-in-container d-flex-column"></div>
+                            <div class="begins-container">
+                                <div class="begins">Begins: 9:am</div>
+                                <div class="enter-class">Enter Class</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="activities-container">
+                    <div class="chart-container">
+                        <div class="chart-header d-flex-row-align">
+                            <div class="font-size-s">Hours Activity</div>
+                            <div class="weekly">Weekly</div>
+                        </div>
+                        <canvas id="myBarChart" height="190"></canvas>
+                    </div>
+                    <div class="semester-schedule-container">
+                        <div class="semester-schedule font-size-s">
+                            Semester Schedule
+                        </div>
+                        <div class="d-flex-gap-s">
+                            <div class="week-width">Week 1 & 2:</div>
+                            <div>Calculus I</div>
+                        </div>
+                        <div class="d-flex-gap-s">
+                            <div class="week-width">Week 3 & 4:</div>
+                            <div>Linear Algebra</div>
+                        </div>
+                        <div class="d-flex-gap-s">
+                            <div class="week-width">Week 5 & 6:</div>
+                            <div>Statistics</div>
+                        </div>
+                        <div class="d-flex-gap-s">
+                            <div class="week-width">Week 1 & 2:</div>
+                            <div>Discrete Math</div>
+                        </div>
+                        <div class="d-flex-gap-s">
+                            <div class="week-width">Week 3 & 4:</div>
+                            <div>Numerical Methods</div>
+                        </div>
+                        <div class="d-flex-gap-s">
+                            <div class="week-width">Week 5 & 6:</div>
+                            <div>Complex Analysis</div>
+                        </div>
+                    </div>
+                    <div id="calender"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+        <script src="../calender/calender.js"></script>
+    </body>
+</html>

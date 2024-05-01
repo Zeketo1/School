@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e2e2e2;
+    font-family: "Sora", sans-serif;
+    background-image: url("../python\ project\ images/white pattern.png");
+    background-size: 300%;
+    background-position: left;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.body-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+}
+
+.main-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.main-right {
+    /* min-height: 106.59%; */
+    position: relative;
+    height: 773px;
+    border-radius: 50px 0 0 50px;
+    background: linear-gradient(
+            to bottom,
+            rgba(226, 226, 226, 0.112),
+            rgba(9, 118, 42, 0.512)
+        ),
+        url("../python\ project\ images/Rectangle 5.png");
+    background-size: 130%;
+    background-position: right;
+    background-attachment: local;
+}
+
+.sign-title-container {
+    display: flex;
+    justify-content: start;
+}
+
+.sign-title {
+    font-size: 35px;
+    font-weight: 550;
+    margin: 40px 0;
+    padding: 0 0 0 15px;
+    color: #097629;
+}
+
+.main-left-container {
+    min-width: 400px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    margin-bottom: 25px;
+}
+
+.username,
+.password {
+    opacity: 0.9;
+    padding: 20px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.56);
+}
+
+.remember-me-container {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.remember-forgot-pass-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.remember-me {
+    opacity: 0.6;
+}
+
+.forgot {
+    text-decoration: underline;
+    font-weight: 550;
+    cursor: pointer;
+    color: #097629;
+}
+
+.login-btn {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(to right, #097629, #947b00);
+    cursor: pointer;
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 10px #09762aa8;
+}
+
+.main-right-content {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    bottom: 10%;
+}
+
+.main-right-text {
+    width: 400px;
+    font-size: 40px;
+    font-weight: 550;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.main-right-btn {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    width: 42%;
+    padding: 15px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(to right, #097629, #947b00);
+    cursor: pointer;
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.699);
+}
