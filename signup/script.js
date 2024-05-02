@@ -23,9 +23,9 @@ view2.addEventListener("click", () => {
         : passwordHide(confirmPassword);
 });
 
-password.addEventListener("input", () => {
-    console.log("Sup");
-});
+// password.addEventListener("input", () => {
+//     console.log("Sup");
+// });
 
 const uppercase = document.querySelector("#uppercase");
 
