@@ -80,6 +80,20 @@ form {
     margin-bottom: 30px;
 }
 
+.input-container-check-password {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.input-container-check-password-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 5px;
+    margin-bottom: 30px;
+}
+
 .input {
     padding: 15px 20px;
     border: none;
@@ -119,7 +133,7 @@ form {
 .lil-circle {
     height: 15px;
     width: 15px;
-    background-color: gray;
+    background-color: #d1c9c9;
     border-radius: 50px;
 }
 

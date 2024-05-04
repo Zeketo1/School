@@ -85,53 +85,71 @@
                     </div>
                     <div class="password-conditions">
                         <div>
-                            <div class="password-conditions-container">
-                                <div class="lil-circle"></div>
+                            <div
+                                class="password-conditions-container"
+                                id="lowercase"
+                            >
+                                <div class="lil-circle lowercase"></div>
                                 <div class="conditions">
                                     One lowercase character
                                 </div>
                             </div>
-                            <div class="password-conditions-container">
-                                <div class="lil-circle"></div>
+                            <div
+                                class="password-conditions-container"
+                                id="special"
+                            >
+                                <div class="lil-circle special"></div>
                                 <div class="conditions">
                                     One special character
                                 </div>
                             </div>
-                            <div class="password-conditions-container">
-                                <div class="lil-circle" id="uppercase"></div>
+                            <div
+                                class="password-conditions-container"
+                                id="uppercase"
+                            >
+                                <div class="lil-circle uppercase"></div>
                                 <div class="conditions">
                                     One uppercase character
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <div class="password-conditions-container">
-                                <div class="lil-circle"></div>
+                            <div
+                                class="password-conditions-container"
+                                id="text-length"
+                            >
+                                <div class="lil-circle text-length"></div>
                                 <div class="conditions">
                                     At least 8 in length
                                 </div>
                             </div>
-                            <div class="password-conditions-container">
-                                <div class="lil-circle"></div>
+                            <div
+                                class="password-conditions-container"
+                                id="number"
+                            >
+                                <div class="lil-circle number"></div>
                                 <div class="conditions">One number</div>
                             </div>
                         </div>
                     </div>
-                    <div class="input-container">
-                        <input
-                            class="input"
-                            type="password"
-                            name="password"
-                            id="confirm-password"
-                            required
-                            placeholder="Confirm Password *"
-                        />
-                        <img
-                            class="view2"
-                            src="../python project images/view.png"
-                            alt="check-mark"
-                            height="20"
-                        />
+                    <div class="input-container-check-password-container">
+                        <div class="input-container-check-password">
+                            <input
+                                class="input"
+                                type="password"
+                                name="password"
+                                id="confirm-password"
+                                required
+                                placeholder="Confirm Password *"
+                            />
+                            <img
+                                class="view2"
+                                src="../python project images/view.png"
+                                alt="check-mark"
+                                height="20"
+                            />
+                        </div>
+                        <div class="check-password-error-massage"></div>
                     </div>
                     <div class="input-container">
                         <input
