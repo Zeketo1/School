@@ -2,8 +2,6 @@ const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirm-password");
 const view1 = document.querySelector(".view1");
 const view2 = document.querySelector(".view2");
-const passwordValue = password.value;
-const confirmPasswordValue = confirmPassword.value;
 
 // password.addEventListener("keyup", (e) => {
 //     if (e.target.value.includes(confirmPasswordValue)) {
@@ -134,24 +132,46 @@ if (password) {
     console.error("Element with ID 'password' not found");
 }
 
-// if (confirmPassword) {
-//     confirmPassword.addEventListener("input", () => {
-//         if (passwordValue === confirmPasswordValue) {
-//             console.log("Yeah TWIN!!!!!!!!!");
-//         } else {
-//             console.log("Naahh TWIN!!!!!!!!!");
-//         }
-//     });
-// } else {
-//     console.error("Element with ID 'confirm-password' not found");
-// }
+const confirmError = document.querySelector(".check-password-error-massage");
 
-// document.querySelector();
+if (confirmPassword) {
+    confirmPassword.addEventListener("input", () => {
+        const passwordValue = password.value;
+        const confirmPasswordValue = confirmPassword.value;
+        if (passwordValue === confirmPasswordValue) {
+            confirmError.innerHTML = "password matches";
+            confirmError.style.color = "green";
+        } else {
+            confirmError.innerHTML = "password doesn't match";
+            confirmError.style.color = "red";
+        }
+    });
+} else {
+    console.error("Element with ID 'confirm-password' not found");
+}
 
-// window.addEventListener("click", () => {
-//     if (passwordValue.match(confirmPasswordValue)) {
-//         console.log("yhhhh");
-//     } else {
-//         console.log("noo");
-//     }
-// });
+function handleFormSubmit(event) {
+    event.preventDefault();
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("myForm");
+    form.addEventListener("submit", handleFormSubmit);
+});
+
+function showToast() {
+    Toastify({
+        text: "This is a toast message",
+        duration: 3000, 
+        close: false,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#4CAF50", 
+        style: {
+            textAlign: "center",
+            padding: "10px", 
+            fontSize: "16px", 
+            color: "#fff",
+        },
+    }).showToast();
+}

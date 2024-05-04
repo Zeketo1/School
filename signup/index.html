@@ -9,6 +9,7 @@
             href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
             rel="stylesheet"
         />
+        <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <link rel="stylesheet" href="style.css" />
         <title>Sign Up</title>
     </head>
@@ -23,7 +24,7 @@
                         Schools Community and unlock your potential
                     </div>
                 </div>
-                <form>
+                <form id="myForm">
                     <div style="margin-bottom: 10px">*Required</div>
                     <div class="input-container">
                         <input
@@ -139,7 +140,6 @@
                                 type="password"
                                 name="password"
                                 id="confirm-password"
-                                required
                                 placeholder="Confirm Password *"
                             />
                             <img
@@ -156,7 +156,6 @@
                             class="input"
                             type="text"
                             name="phone-number"
-                            required
                             placeholder="Phone Number *"
                         />
                         <img
@@ -179,7 +178,9 @@
                             <span style="color: red">School Content</span>
                         </div>
                     </div>
-                    <button class="create-btn">Create Account</button>
+                    <button class="create-btn" onclick="showToast()">
+                        Create Account
+                    </button>
                 </form>
             </div>
         </div>
