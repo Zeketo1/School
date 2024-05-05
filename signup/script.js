@@ -3,12 +3,6 @@ const confirmPassword = document.querySelector("#confirm-password");
 const view1 = document.querySelector(".view1");
 const view2 = document.querySelector(".view2");
 
-// password.addEventListener("keyup", (e) => {
-//     if (e.target.value.includes(confirmPasswordValue)) {
-//         console.log("me");
-//     }
-// });
-
 const passwordView = (password) => {
     password.type = "text";
 };
