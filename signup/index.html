@@ -24,7 +24,7 @@
                         Schools Community and unlock your potential
                     </div>
                 </div>
-                <form id="myForm">
+                <form id="myForm" onsubmit="handleSubmit()">
                     <div style="margin-bottom: 10px">*Required</div>
                     <div class="input-container">
                         <input
@@ -57,7 +57,7 @@
                     <div class="input-container">
                         <input
                             class="input"
-                            type="text"
+                            type="email"
                             name="email"
                             required
                             placeholder="Email *"
@@ -139,6 +139,7 @@
                                 class="input"
                                 type="password"
                                 name="password"
+                                required
                                 id="confirm-password"
                                 placeholder="Confirm Password *"
                             />
@@ -156,6 +157,7 @@
                             class="input"
                             type="text"
                             name="phone-number"
+                            required
                             placeholder="Phone Number *"
                         />
                         <img
@@ -165,20 +167,20 @@
                         />
                     </div>
                     <div class="policy-container">
-                        <input type="checkbox" />
+                        <input type="checkbox" required />
                         <div>
                             I have read and agreed to the
                             <span style="color: red">Privacy Policy</span>
                         </div>
                     </div>
                     <div class="policy-container">
-                        <input type="checkbox" />
+                        <input type="checkbox" required />
                         <div>
                             I agree to receiving
                             <span style="color: red">School Content</span>
                         </div>
                     </div>
-                    <button class="create-btn" onclick="showToast()">
+                    <button type="submit" class="create-btn">
                         Create Account
                     </button>
                 </form>

@@ -82,7 +82,6 @@ function handleInputChange(event) {
             special.childNodes[1].innerHTML &&
                 specialClass.childNodes[0].remove();
         }
-        // special.childNodes[1].style.backgroundColor = "#d1c9c9";
     }
 
     if (hasUppercase) {
@@ -92,7 +91,6 @@ function handleInputChange(event) {
             uppercase.childNodes[1].innerHTML &&
                 uppercaseClass.childNodes[0].remove();
         }
-        // uppercase.firstElementChild.style.backgroundColor = "#d1c9c9";
     }
 
     if (hasLowercase) {
@@ -102,7 +100,6 @@ function handleInputChange(event) {
             lowercase.childNodes[1].innerHTML &&
                 lowercaseClass.childNodes[0].remove();
         }
-        // lowercase.firstElementChild.style.backgroundColor = "#d1c9c9";
     }
 
     if (hasInteger) {
@@ -112,7 +109,6 @@ function handleInputChange(event) {
             number.childNodes[1].innerHTML &&
                 numberClass.childNodes[0].remove();
         }
-        // number.firstElementChild.style.backgroundColor = "#d1c9c9";
     }
 
     if (text.length >= 8) {
@@ -122,7 +118,6 @@ function handleInputChange(event) {
             textLength.childNodes[1].innerHTML &&
                 textLengthClass.childNodes[0].remove();
         }
-        // textLength.firstElementChild.style.backgroundColor = "#d1c9c9";
     }
 }
 
@@ -138,12 +133,18 @@ if (confirmPassword) {
     confirmPassword.addEventListener("input", () => {
         const passwordValue = password.value;
         const confirmPasswordValue = confirmPassword.value;
-        if (passwordValue === confirmPasswordValue) {
-            confirmError.innerHTML = "password matches";
-            confirmError.style.color = "green";
+        if (confirmPasswordValue.length > 0) {
+            if (passwordValue === confirmPasswordValue) {
+                confirmError.style.display = "block";
+                confirmError.innerHTML = "password matches";
+                confirmError.style.color = "green";
+            } else {
+                confirmError.style.display = "block";
+                confirmError.innerHTML = "password doesn't match";
+                confirmError.style.color = "red";
+            }
         } else {
-            confirmError.innerHTML = "password doesn't match";
-            confirmError.style.color = "red";
+            confirmError.style.display = "none";
         }
     });
 } else {
@@ -161,17 +162,67 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function showToast() {
     Toastify({
-        text: "This is a toast message",
-        duration: 3000, 
+        text: "Your account has been created....",
+        duration: 2500,
         close: false,
         gravity: "top",
         position: "right",
-        backgroundColor: "#4CAF50", 
         style: {
+            background: "#4CAF50",
             textAlign: "center",
-            padding: "10px", 
-            fontSize: "16px", 
+            padding: "10px",
+            fontSize: "16px",
             color: "#fff",
         },
     }).showToast();
+    setTimeout(() => {
+        window.location.href = "../login/index.html";
+    }, 2000);
+}
+
+// Function to check if the form is completely filled
+function isFormComplete(form) {
+    // Get all elements in the form with the 'required' attribute
+    const requiredElements = form.querySelectorAll("[required]");
+
+    for (const element of requiredElements) {
+        // For text-based inputs, check if they are empty
+        if (element.type === "text" || element.type === "email") {
+            if (element.value.trim() === "") {
+                return false; // If any required text input is empty, return false
+            }
+        }
+
+        // For radio buttons, check if at least one is selected
+        if (element.type === "radio") {
+            const groupName = element.name;
+            const isChecked = form.querySelector(
+                `input[name="${groupName}"]:checked`
+            );
+            if (!isChecked) {
+                return false; // If no radio button in the group is checked, return false
+            }
+        }
+
+        // For checkboxes, check if they are checked
+        if (element.type === "checkbox") {
+            if (!element.checked) {
+                return false; // If a required checkbox is not checked, return false
+            }
+        }
+    }
+
+    return true; // If all required fields are filled, return true
+}
+
+function handleSubmit() {
+    // Get the form element
+    const form = document.getElementById("myForm");
+
+    // Check if the form is completely filled
+    if (isFormComplete(form)) {
+        showToast();
+    } else {
+        alert("Please fill in all required fields.");
+    }
 }
